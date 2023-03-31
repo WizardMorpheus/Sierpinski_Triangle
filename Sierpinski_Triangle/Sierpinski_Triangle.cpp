@@ -176,6 +176,10 @@ int main(int argc, char* args[])
 			points.push_back(P1);
 
 
+			SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+			SDL_RenderClear(gRenderer);
+
+
 			//While application is running
 			while (!quit)
 			{
@@ -198,22 +202,15 @@ int main(int argc, char* args[])
 
 
 				//Clear screen
-				SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
-				SDL_RenderClear(gRenderer);
+				/*SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+				SDL_RenderClear(gRenderer);*/
 
 				
 				//render things
 				
 
 				SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
-				SDL_RenderDrawPoint(gRenderer, s_points[0].x, s_points[0].y);
-				SDL_RenderDrawPoint(gRenderer, s_points[1].x, s_points[1].y);
-				SDL_RenderDrawPoint(gRenderer, s_points[2].x, s_points[2].y);
-
-				for (int i = 0; i < points.size(); i++)
-				{
-					SDL_RenderDrawPoint(gRenderer, points[i].x, points[i].y);
-				}
+				SDL_RenderDrawPoint(gRenderer, points[points.size() - 1].x, points[points.size() - 1].y);
 
 
 				//Update screen
