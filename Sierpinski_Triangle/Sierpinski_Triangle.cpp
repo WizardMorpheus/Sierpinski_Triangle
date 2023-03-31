@@ -195,9 +195,9 @@ int main(int argc, char* args[])
 
 				int num = rand() % 3;
 
-				SDL_Point NP = { points[points.size() - 1].x + ((s_points[num].x - points[points.size() - 1].x) / 2),
-								 points[points.size() - 1].y + ((s_points[num].y - points[points.size() - 1].y) / 2) };
-				points.push_back(NP);
+				SDL_Point NP = { points[0].x + ((s_points[num].x - points[0].x) / 2),
+								 points[0].y + ((s_points[num].y - points[0].y) / 2) };
+				points[0] = NP;
 
 
 
@@ -210,7 +210,7 @@ int main(int argc, char* args[])
 				
 
 				SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
-				SDL_RenderDrawPoint(gRenderer, points[points.size() - 1].x, points[points.size() - 1].y);
+				SDL_RenderDrawPoint(gRenderer, points[0].x, points[0].y);
 
 
 				//Update screen
