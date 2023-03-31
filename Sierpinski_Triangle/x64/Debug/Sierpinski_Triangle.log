@@ -1,0 +1,3 @@
+﻿  Sierpinski_Triangle.cpp
+E:\Visual_Studio\Projects\Sierpinski_Triangle\Sierpinski_Triangle\Sierpinski_Triangle.cpp(142,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Sierpinski_Triangle.vcxproj -> E:\Visual_Studio\Projects\Sierpinski_Triangle\x64\Debug\Sierpinski_Triangle.exe
